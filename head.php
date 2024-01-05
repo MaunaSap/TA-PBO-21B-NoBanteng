@@ -46,11 +46,19 @@
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
-   <div class="jumbotron daftar">
+   <div class="background daftar">
         <center><img src="img/tut.png" alt="" width="10%"></center>
         <h1><center>Pendaftaran Siswa Baru</center></h1>
         <h2><center>SMK MUTIARA NATAR</center></h2>
-        <center><a href="petunjuk.php" class="btn btn-primary btn-lg petunjuk">Baca Petunjuk Pendaftaran</a>
+        <?php 
+        $current_page = basename($_SERVER['PHP_SELF']);
+        if ($current_page == 'petunjuk.php') {
+            // Jika ya, tampilkan tombol kembali
+            echo '<center><a href="index.php" class="btn btn-primary btn-lg petunjuk">Kembali</a>';
+        }else if($current_page == 'petunjuk.php'){
+          echo '<center><a href="petunjuk.php" class="btn btn-primary btn-lg petunjuk">Petunjuk</a>';
+        }
+        ?>
     </div>
 <style>
 
@@ -69,8 +77,9 @@
 }
 
 
-.jumbotron{
-  background-color: springgreen;
+.background{
+  background-color: #1484e6;
+  padding: 20px;
 }
 .navbar-default{
   margin-bottom: 0;

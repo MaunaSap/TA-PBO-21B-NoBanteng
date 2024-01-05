@@ -33,40 +33,51 @@ if(isset($_POST['submit'])){
 ?>
 
 <style>
-    .block-web.primary-box {
+    .block-web.primary-box 
+    {
         background: #4eb2d8;
         padding: 5px;
         color: white;
     }
     
-    .jumbotron{
+    .jumbotron
+    {
   background-color: springgreen;
-}
-
-.navbar-default{
-  margin-bottom: 0;
-}
-    .navbar {
-        margin-bottom: 0;
     }
-	
-  .login{
-    background: lightcoral;
-  }
 
-  .daftar{
-        background-color: springgreen;
-  }
+    .navbar-default
+    {
+    margin-bottom: 0;
+    }
+    .navbar 
+    {
+            margin-bottom: 0;
+    }
+        
+    .login
+    {
+        background: lightcoral;
+    }
 
-  .petunjuk{
-    border-radius: 0px;
-  }
+    .daftar
+    {
+            background-color: #1484e6;
+    }
+
+    .petunjuk
+    {
+        border-radius: 0px;
+    }
+    .top
+    {
+        padding-top: 20px;
+    }
 </style>
 
 
 
 
-<div class="container-fluid">
+<div class="container-fluid top">
 
 
     <div class="row" style="margin-left:0;margin-right:0;">
@@ -74,7 +85,7 @@ if(isset($_POST['submit'])){
     
 
         <div class="col-md-8">
-        <div class="jumbotron daftar">
+        <div class="jumbotron">
             <div class="header">
                 <h3><center>Formulir Pendaftaran</center></h3>
             </div>
@@ -191,17 +202,6 @@ if(isset($_POST['submit'])){
                     <label for="exampleInputEmail1">Konfirmasi Email</label>
                     <input type="email" name="konfirmemail" class="form-control" placeholder="konfirmasi email" required>
                 </div>
-<!-- 
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Kode</label><br>
-                    <img src="captcha.php" alt="">
-                </div>
-
-                <div class="form-group">
-                    <label class="lead">Masukan Kode</label>
-                    <input type="text" name="kode" class="form-control">
-                </div> -->
-
                 <div class="form-group">
                     <input type="submit" name="submit" href="#" class="btn btn-block btn-primary btn-lg" value="Daftar">
                 </div>

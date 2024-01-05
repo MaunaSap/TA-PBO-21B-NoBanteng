@@ -7,13 +7,13 @@ function ceklogin($nama,$password){
 	$query=mysqli_query($konek,$sql);
 
 	$cek=mysqli_fetch_array($query);
-	$_SESSION['id']=$cek['id'];
-	$_SESSION['nama']=$cek['nama_admin'];
 
 	if(mysqli_num_rows($query)>0){
-		return true;
+		$_SESSION['id']=$cek['id'];
+		$_SESSION['nama']=$cek['nama_admin'];
+		echo "<script>window.location.href='index.php'</script>";
 	}else{
-		return false;
+		echo "<script>alert('Login Gagal')</script>";
 	}
 }
 

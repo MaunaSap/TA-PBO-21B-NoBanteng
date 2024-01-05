@@ -78,11 +78,9 @@ if(isset($_POST['masuk'])){
   $password=md5($password);
 
 
-  if(ceklogin($nama,$password)){
-    echo "<script>window.location.href='index.php'</script>";
-  }else{
-    echo "<script>alert('Login Gagal')</script>";
-  }
+  ceklogin($nama,$password);
+ 
+
 }
 
  ?>

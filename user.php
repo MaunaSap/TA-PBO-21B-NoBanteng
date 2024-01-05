@@ -62,7 +62,7 @@ $result4=tampilpembayaran($id);
                 </p>
 
                 <p>Selamat, Anda telah berhasil melakukan Aktivasi Pengisian Formulir. Silahkan melakukan pembayaran sesuai Invoice yang tayang di laman ini.</p>
-                <p>Pertanyaan dan Informasi, silahkan kontak Panitia di psb@smkmutiara.sch.id (GTalk/Hangout) atau 0218000063!</p>
+                <p>Pertanyaan dan Informasi, silahkan kontak Panitia di psb@smkmutiara.sch.id (WhatsApp/Hangout) atau 0218000063!</p>
             </div>
         </div>
 
@@ -141,7 +141,12 @@ $result4=tampilpembayaran($id);
                     <tr>
                         <td>Tanggal Pengisian Formulir</td>
                         <td>
-                            <?php echo $row['tgl_daftar'] ?>
+                            <?php 
+                            $tgl = $row['tgl_daftar'];
+                            $tgl_rapih = date_create_from_format('mdy', $tgl);
+                            $tgl_daftar_format = date_format($tgl_rapih, 'd/M/Y');
+                            echo $tgl_daftar_format; 
+                            ?>
                         </td>
                     </tr>
                 </table>
@@ -189,6 +194,10 @@ $result4=tampilpembayaran($id);
                             <tr id="total-bea">
                                 <td>TOTAL BIAYA PENDAFTARAN:</td>
                                 <td> 2.680.000</td>
+                            </tr>
+                            <tr id="total-bea">
+                                <td>REKENING A.N SMK MUTIARA NATAR:</td>
+                                <td> 08828138123</td>
                             </tr>
                             <tr>
                                 <td>Status Pembayaran</td>

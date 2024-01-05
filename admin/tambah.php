@@ -9,9 +9,9 @@ if(isset($_POST['submit'])){
     $passwordmd=md5($password);
 
       if(simpanadmin($nama,$passwordmd)){
-        echo "berhasil";
+		    echo "<script>alert('Berhasil')</script>";
       }else{
-        echo "gagal";
+		    echo "<script>alert('Gagal')</script>";
       }
   }else{
     echo "password berbeda";
