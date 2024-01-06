@@ -40,8 +40,8 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+  padding: 11px;
+  font-size: 15px;
 }
 .form-signin .form-control:focus {
   z-index: 2;
@@ -52,7 +52,7 @@
   border-bottom-left-radius: 0;
 }
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
