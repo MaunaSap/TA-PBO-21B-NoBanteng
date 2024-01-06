@@ -3,30 +3,51 @@
 include 'head.php';
 
 
-if(isset($_POST['submit'])){
-  $nama=$_POST['nama'];
-  $tempat=$_POST['tempat'];
-  $date=$_POST['date'];
-  $jns_kel=$_POST['jns_kel'];
-  $agama=$_POST['agama'];
-  $nohp=$_POST['nohp'];
-  $alamat=$_POST['alamat'];
-  $provinsi=$_POST['provinsi'];
-  $no_jaket=$_POST['no_jaket'];
-  $email=$_POST['email'];
-  $konfirmemail=$_POST['konfirmemail'];
-  $date=date('dmy');
+// ... (Sintaksis yang sudah ada)
 
-  if($email===$konfirmemail){
-        if(daftarformulir($nama,$tempat,$date,$jns_kel,$agama,$nohp,$alamat,$provinsi,$no_jaket,$email,$date)){
-          echo "<script>alert('Pendaftaran Berhasil, Silahkan Login')</script>";
-        }else{
-          echo "<script>alert('Pendaftaran Gagal')</script>";
+// Validasi tambahan sebelum memproses pendaftaran
+if(isset($_POST['submit'])){
+    $nama=$_POST['nama'];
+    $tempat=$_POST['tempat'];
+    $date=$_POST['date'];
+    $jns_kel=$_POST['jns_kel'];
+    $agama=$_POST['agama'];
+    $nohp=$_POST['nohp'];
+    $alamat=$_POST['alamat'];
+    $provinsi=$_POST['provinsi'];
+    $no_jaket=$_POST['no_jaket'];
+    $email=$_POST['email'];
+    $konfirmemail=$_POST['konfirmemail'];
+    $date=date('dmy');
+
+    // Validasi apakah semua field terisi sebelum memproses pendaftaran
+    if(empty($nama) || empty($tempat) || empty($date) || empty($jns_kel) || empty($agama) || empty($nohp) || empty($alamat) || empty($provinsi) || empty($no_jaket) || empty($email) || empty($konfirmemail)) {
+        echo "<script>alert('Harap isi semua field')</script>";
+    } else {
+        // Proses pendaftaran jika semua field terisi
+        if($email===$konfirmemail){
+            // Validasi format email
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo "<script>alert('Format email tidak valid')</script>";
+            } else {
+                // Validasi nomor telepon
+                if (!ctype_digit($nohp)) {
+                    echo "<script>alert('No Handphone hanya boleh berisi angka')</script>";
+                } else {
+                    // Proses pendaftaran
+                    if(daftarformulir($nama,$tempat,$date,$jns_kel,$agama,$nohp,$alamat,$provinsi,$no_jaket,$email,$date)){
+                        echo "<script>alert('Pendaftaran Berhasil, Silahkan Login')</script>";
+                    } else {
+                        echo "<script>alert('Pendaftaran Gagal')</script>";
+                    }
+                }
+            }
+        } else {
+            echo "<script>alert('Email konfirmasi tidak sama, silahkan ulangi kembali')</script>";
         }
-  }else{
-    echo "<script>alert('Email konfirmasi tidak sama, silahkan ulangi kembali')</script>";
-  }
+    }
 }
+
 
 
 
