@@ -36,7 +36,7 @@ $result=tampilpembayaranperid($id);
               if(simpancekbayar($transaksi,$id)){
                 echo "<script>window.location.href='data_pembayaran.php'</script>";
               }else{
-                echo "gagal";
+                echo "<script>alert('Gagal Membuat Transaksi')</script>";
               }
              } ?>
         <form action="" method="post" accept-charset="utf-8">
