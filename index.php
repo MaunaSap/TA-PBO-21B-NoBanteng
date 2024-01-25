@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
         <div class="col-md-8">
             <div class="jumbotron">
                 <div class="header">
-                    <h2><center>Formulir Pendaftaran</center></h2>
+                    <h3><center>Formulir Pendaftaran</center></h3>
                 </div>
                 <hr style="border:1px solid black">
                 <form action="" method="post">
