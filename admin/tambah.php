@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
 		    echo "<script>alert('Gagal')</script>";
       }
   }else{
-    echo "password berbeda";
+    echo "<script>alert('Sandi tidak terdaftar')</script>";
   }
 }
 
