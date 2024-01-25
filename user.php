@@ -61,7 +61,7 @@ $result4=tampilpembayaran($id);
                     <?php echo strtoupper($row['nama_lengkap']) ?>
                 </p>
 
-                <p>Selamat! Fiki Aktivasi pengisian formulir telah berhasil. Mohon segera lakukan pembayaran sesuai dengan invoice yang tertera di laman ini.</p>
+                <p>Selamat! agung Aktivasi pengisian formulir telah berhasil. Mohon segera lakukan pembayaran sesuai dengan invoice yang tertera di laman ini.</p>
                 <p>Untuk pertanyaan dan informasi lebih lanjut, silakan hubungi Panitia melalui email: psb@smkmutiara.sch.id atau melalui WhatsApp/Hangout: 0218000063!</p>
 
             </div>
