@@ -13,19 +13,19 @@ $result4=tampilpembayaran($id);
 <style>
     .block-web.success-box {
         background: #45f5cc;
-        padding: 10px;
+        padding: 11px;
         /* color: white; */
     }
     
     .block-web.dark-box {
         background: darksalmon;
-        padding: 10px;
+        padding: 11px;
         margin-top: 1%;
     }
     
     .header {
         background: #89b0d2;
-        padding: 10px;
+        padding: 11px;
         margin-top: 10%;
         color: white;
     }
@@ -61,8 +61,9 @@ $result4=tampilpembayaran($id);
                     <?php echo strtoupper($row['nama_lengkap']) ?>
                 </p>
 
-                <p>Selamat, Anda telah berhasil melakukan Aktivasi Pengisian Formulir. Silahkan melakukan pembayaran sesuai Invoice yang tayang di laman ini.</p>
-                <p>Pertanyaan dan Informasi, silahkan kontak Panitia di psb@smkmutiara.sch.id (WhatsApp/Hangout) atau 0218000063!</p>
+                <p>Selamat! agung Aktivasi pengisian formulir telah berhasil. Mohon segera lakukan pembayaran sesuai dengan invoice yang tertera di laman ini.</p>
+                <p>Untuk pertanyaan dan informasi lebih lanjut, silakan hubungi Panitia melalui email: psb@smkmutiara.sch.id atau melalui WhatsApp/Hangout: 0218000063!</p>
+
             </div>
         </div>
 
