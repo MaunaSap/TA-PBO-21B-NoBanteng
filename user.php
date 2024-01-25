@@ -13,19 +13,19 @@ $result4=tampilpembayaran($id);
 <style>
     .block-web.success-box {
         background: #45f5cc;
-        padding: 10px;
+        padding: 11px;
         /* color: white; */
     }
     
     .block-web.dark-box {
         background: darksalmon;
-        padding: 10px;
+        padding: 11px;
         margin-top: 1%;
     }
     
     .header {
         background: #89b0d2;
-        padding: 10px;
+        padding: 11px;
         margin-top: 10%;
         color: white;
     }
