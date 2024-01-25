@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
             <form action="" method="post">
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <label for="exampleInputEmail1">NAMA LENGKAP</label>
                     <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
                 </div>
 
