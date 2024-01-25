@@ -41,9 +41,9 @@ if(isset($_POST['bayar'])){
     
             move_uploaded_file($asal, "img/bukti_transfer/".$nama);
           }else{
-            echo "<script>alert('Format Harus JPG/')</script> ";
+            echo "Maaf format filenya harus jpg/png ";
           }
-    
+          
       }else{
         echo "file terlalu besar";
 >>>>>>> 45caa11a027f35d23552da1bbbad4e565fc18f3d
