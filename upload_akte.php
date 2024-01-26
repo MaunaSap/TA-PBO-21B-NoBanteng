@@ -25,13 +25,13 @@ if(isset($_POST['simpanakte'])){
     
             move_uploaded_file($asal, "img/dokumen/akte/".$nama);
           }else{
-            echo "Maaf format filenya harus jpg/png ";
+            echo "<script>alert('Maaf, format filenya harus jpg/png.')</script>";
           }
     
       }else{
-        echo "file terlalu besar";
+        echo "<script>alert('file terlalu besar')</script>";
       }
-  }else "Ada kesalahan saat upload";
+  }else echo "Ada kesalahan saat upload";
 }
 
 ?>
