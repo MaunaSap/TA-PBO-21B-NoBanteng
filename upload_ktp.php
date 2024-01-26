@@ -27,11 +27,11 @@ if(isset($_POST['simpanktp'])){
         } 
     
       } else {
-        echo "Maaf, format filenya harus jpg/png.";
+        echo "<script>alert('Maaf, format filenya harus jpg/png.')</script>";
       }
     
     } else {
-      echo "File terlalu besar.";
+      echo "<script>alert('file terlalu besar')</script>";
     }
   } else {
     echo "Ada kesalahan saat upload.";

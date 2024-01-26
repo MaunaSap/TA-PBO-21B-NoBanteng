@@ -13,23 +13,24 @@ if(isset($_POST['simpanakte'])){
   $format = pathinfo($nama, PATHINFO_EXTENSION);
 
   if($error === 0){
-    if($size > 9000){
-      if(in_array($format, ['jpg', 'png', 'JPG', 'PNG'])){
-        move_uploaded_file($asal, "img/dokumen/akte/".$nama);
-
-        if(simpanakte($id_pendaftar, $lokasi_foto)){
-          echo "<script>window.location.href='dokumen.php'</script>";
-        } else {
-          echo "Error: Unable to save data.";
-        }
-      } else {
-        echo "Maaf format filenya harus jpg/png ";
+    if ($size > 9000){ 
+    
+          if($format === "jpg" || $format === "png" || $format === "JPG" || $format === "PNG" ){
+            
+            if(simpanakte($id_pendaftar,$lokasi_foto)){
+              echo "<script>window.location.href='dokumen.php'</script>";
+              }else{
+                echo mysqli_error($konek);
+              } 
+    
+            move_uploaded_file($asal, "img/dokumen/akte/".$nama);
+          }else{
+            echo "<script>alert('Maaf, format filenya harus jpg/png.')</script>";
+          }
+    
+      }else{
+        echo "<script>alert('file terlalu besar')</script>";
       }
-    } else {
-      echo "file terlalu besar";
-    }
-  } else {
-    echo "Ada kesalahan saat upload";
-  }
+  }else echo "Ada kesalahan saat upload";
 }
 ?>
