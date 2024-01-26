@@ -27,7 +27,7 @@ if(isset($_POST['simpanktp'])){
         } 
     
       } else {
-        echo "Maaf, format filenya harus jpg/png.";
+        echo "<script>alert('Maaf, format filenya harus jpg/png.')</script>";
       }
     
     } else {
