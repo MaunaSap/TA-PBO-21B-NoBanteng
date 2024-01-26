@@ -15,9 +15,6 @@ if(isset($_POST['bayar'])){
   $format = pathinfo($nama, PATHINFO_EXTENSION);
 
   if($error === 0){
-    if($size > 9000){
-      if(in_array($format, ['jpg', 'png', 'JPG', 'PNG'])){
-        move_uploaded_file($asal, "img/bukti_transfer/".$nama);
 
     if ($size > 9000){ 
     
@@ -34,11 +31,10 @@ if(isset($_POST['bayar'])){
           }else{
             echo "Maaf format filenya harus jpg/png ";
           }
-    } else {
-      echo "File terlalu besar";
-    }
-  } else {
-    echo "Ada kesalahan saat upload";
-  }
+    
+      }else{
+        echo "file terlalu besar";
+      }
+  }else "Ada kesalahan saat upload";
 }
 ?>
