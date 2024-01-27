@@ -21,33 +21,54 @@ if (isset($_POST['submit'])) {
     // Validasi apakah semua field terisi sebelum memproses pendaftaran
     if (empty($nama) || empty($tempat) || empty($date) || empty($jns_kel) || empty($agama) || empty($nohp) || empty($alamat) || empty($provinsi) || empty($no_jaket) || empty($email) || empty($konfirmemail)) {
         echo "<script>alert('Harap isi semua field')</script>";
+        $errors[] = 'Harap isi semua field';
     } else {
         // Proses pendaftaran jika semua field terisi
         if ($email === $konfirmemail) {
             // Validasi format email
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 echo "<script>alert('Format email tidak valid')</script>";
+                $errors[] = 'Format email tidak valid';
             } else {
                 // Validasi nomor telepon
                 if (!ctype_digit($nohp)) {
                     echo "<script>alert('No Handphone hanya boleh berisi angka')</script>";
+                    $errors[] = 'No Handphone hanya boleh berisi angka';
                 } else {
                     // Proses pendaftaran
                     if (daftarformulir($nama, $tempat, $date, $jns_kel, $agama, $nohp, $alamat, $provinsi, $no_jaket, $email, $date)) {
                         echo "<script>alert('Pendaftaran Berhasil, Silahkan Login')</script>";
                     } else {
                         echo "<script>alert('Pendaftaran Gagal')</script>";
+                        $errors[] = 'Pendaftaran Gagal';
                     }
                 }
             }
         } else {
             echo "<script>alert('Email konfirmasi tidak sama, silahkan ulangi kembali')</script>";
+            $errors[] = 'Email konfirmasi tidak sama, silahkan ulangi kembali';
         }
     }
 }
 
 ?>
+<!-- Penanganan error -->
+<?php if (!empty($errors)) : ?>
+    <div class="alert alert-danger">
+        <ul>
+            <?php foreach ($errors as $error) : ?>
+                <li><?php echo $error; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
 
+<!-- Formulir pendaftaran -->
+<div class="container-fluid top">
+    <!-- Sisipkan formulir di sini -->
+</div>
+
+<?php include 'foot.php'; ?>
 <style>
     .block-web.primary-box {
         background: #4eb2d8;
