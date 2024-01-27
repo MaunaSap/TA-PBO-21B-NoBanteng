@@ -56,7 +56,7 @@ if(isset($_POST['simpan_foto'])){
     <div class="row">
      <div class="col-md-4 petunjuk">
     <div>
-      <legend>Formulir Data Dokumen</legend>
+      <legend>FORMULIR DATA DOKUMEN</legend>
       Isilah formulir dokumen ini dengan informasi yang sebenar-benarnya.
     </div>
     <br>
