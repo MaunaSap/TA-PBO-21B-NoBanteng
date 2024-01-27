@@ -61,7 +61,7 @@ if(isset($_POST['simpan_foto'])){
     </div>
     <br>
     <div>
-      <legend>Formulir Lainnya</legend>
+      <legend>FORMULIR LAINNYA</legend>
 
       <a class="btn btn-success btn-block" href="orangtua.php">Orang Tua</a><br>
       <a class="btn btn-success btn-block" href="pendidikan.php">Pendidikan</a><br>
@@ -69,7 +69,7 @@ if(isset($_POST['simpan_foto'])){
     </div>
 
     <div>
-    <legend>Halaman Utama</legend>
+    <legend>HALAMAN UTAMA</legend>
       <legend>
         <a class="btn btn-success btn-block" href="user.php">Rincian</a><br>
       </legend>
