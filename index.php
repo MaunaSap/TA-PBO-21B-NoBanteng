@@ -233,12 +233,12 @@ if (isset($_POST['submit'])) {
             </div>
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
+                    <label for="exampleInputEmail1">EMAIL</label>
                     <input type="email" name="email" class="form-control" placeholder="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Konfirmasi Email</label>
+                    <label for="exampleInputEmail1">KONFIRMASI EMAIL</label>
                     <input type="email" name="konfirmemail" class="form-control" placeholder="konfirmasi email" required>
                 </div>
                 <div class="form-group">
