@@ -70,7 +70,7 @@ if(isset($_POST['submit']))
       <a class="btn btn-success btn-block" href="dokumen.php">Dokumen</a><br>
     </div>
     <div>
-    <legend>Halaman Utama</legend>
+    <legend>HALAMAN UTAMA</legend>
       <legend>
         <a class="btn btn-success btn-block" href="user.php">Rincian</a><br>
       </legend>
