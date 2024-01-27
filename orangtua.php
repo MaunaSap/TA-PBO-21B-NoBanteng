@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
     <div class="col-md-4 petunjuk">
     <div>
       <legend>Formulir Data Orang tua</legend>
-      Isilah formulir orang tua ini dengan informasi yang sebenar-benarnya.
+      Isilah formulir orang tua ini dengan informasi yang tepat.
     </div>
     <br>
     <div>
