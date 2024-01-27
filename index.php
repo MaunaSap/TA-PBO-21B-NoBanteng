@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
         <div class="col-md-8">
             <div class="jumbotron">
                 <div class="header">
-                    <h3><center>Formulir Pendaftaran Siswa</center></h3>
+                    <h3><center>FORMULIR PENDAFTARAN SISWA</center></h3>
                 </div>
                 <hr style="border:1px solid black">
                 <form action="" method="post">
