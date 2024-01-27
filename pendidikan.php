@@ -5,7 +5,20 @@
 if(empty($id=$_SESSION['id'])){ ?>
   <script>window.location.href='index.php'</script>
 <?php }else{
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
+  // Validasi formulir
+  $required_fields = array('status', 'kota', 'kecamatan', 'kodepos', 'namaslta', 'noijazah', 'tahunlulus');
+  $errors = false;
+
+  foreach($required_fields as $field) {
+      if(empty($_POST[$field])) {
+          $errors = true;
+          echo "<script>alert('Silakan lengkapi semua kolom formulir.')</script>";
+          break;
+      }
+  }
+  if(!$errors) {
   $nama=$_SESSION['nama'];
   $id_pendaftar=$_SESSION['id'];
   $statusp=$_POST['status'];
@@ -21,6 +34,7 @@ if(isset($_POST['submit'])){
     echo "<script>alert('Berhasil di simpan')</script>";
   }else{
     echo mysqli_error($konek);
+  }
   }
 
 }
