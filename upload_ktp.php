@@ -34,7 +34,7 @@ if(isset($_POST['simpanktp'])){
       echo "<script>alert('file terlalu besar')</script>";
     }
   } else {
-    echo "Ada kesalahan saat upload.";
+    echo "<script>alert('ada kesalahan upload')</script>";
   }
 }
 ?>
