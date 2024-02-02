@@ -31,6 +31,6 @@ if(isset($_POST['simpanakte'])){
       }else{
         echo "<script>alert('file terlalu besar')</script>";
       }
-  }else echo "Ada kesalahan saat upload";
+  }else echo "<script>alert('ada kesalahan upload')</script>";
 }
 ?>
