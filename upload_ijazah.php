@@ -31,7 +31,7 @@ if(isset($_POST['simpanijazah'])){
       }else{
         echo "<script>alert('file terlalu besar')</script>";
       }
-  }else "Ada kesalahan saat upload";
+  }else "<script>alert('ada kesalahan upload')</script>";
 }
 
 ?>
